@@ -1,7 +1,7 @@
 import os
 import json
 from langchain_core.messages import AIMessage, HumanMessage
-from langchain_openai import AzureChatOpenAI
+from langchain_openai import ChatOpenAI
 
 
 def load_personas(filepath):
@@ -27,7 +27,7 @@ def initialize_llm(model_name):
         model_name (str): The name of the model to initialize ('GPT-3.5' or 'GPT-4').
 
     Returns:
-        AzureChatOpenAI: The initialized LLM object.
+        ChatOpenAI: The initialized LLM object.
     """
     if model_name == "GPT-3.5":
         return ChatOpenAI(
